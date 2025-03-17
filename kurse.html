@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurse - Best Drivers Fahrschule</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Yellowtail&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script>
+        function openBeratung() {
+            window.open('kontakt.html', '_blank');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><span class="title-first">Fahrschule</span> <span class="title-second">Best Drivers</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="kurse.html">Kurse</a></li>
+                <li><a href="preise.html">Preise</a></li>
+                <li><a href="oeffnungszeiten.html">Öffnungszeiten</a></li>
+                <li><a href="kontakt.html">Kontakt & Anfahrt</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="https://www.instagram.com/fahrschule_bestdrivers/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://maps.google.com/maps?q=Waller+Heerstraße+48,+28217+Bremen" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="detail-content">
+            <h1>Unsere Führerschein-Kurse</h1>
+
+            <div class="wichtige-info-box">
+                <h2><i class="fas fa-info-circle"></i> Wie kommst du schneller an deinen Führerschein?</h2>
+                <div class="schritte-liste">
+                    <div class="schritt">
+                        <i class="fas fa-first-aid"></i>
+                        <p>Schließ vor der Anmeldung deinen Erste-Hilfe-Kurs ab</p>
+                    </div>
+                    <div class="schritt">
+                        <i class="fas fa-eye"></i>
+                        <p>Mach einen Sehtest</p>
+                    </div>
+                    <div class="schritt">
+                        <i class="fas fa-id-card"></i>
+                        <p>Besorg dir ein schickes biometrisches Passfoto</p>
+                    </div>
+                    <div class="schritt">
+                        <i class="fas fa-car"></i>
+                        <p>Komm bei uns vorbei und wir finden was Passendes für dich!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="kurs-ubersicht">
+                <div id="intensiv" class="kurs-detail">
+                    <h2>Intensivkurse</h2>
+                    <div class="kurs-info">
+                        <div class="info-box">
+                            <h3>Das Wichtigste im Überblick:</h3>
+                            <ul>
+                                <li>Bring in 7 Tagen deine Theorieunterrichte hinter dich!</li>
+                                <li>14 Pflichtthemen kompakt</li>
+                                <li>Perfekt für Schnellstarter</li>
+                            </ul>
+                        </div>
+                        <a href="#" onclick="openBeratung(); return false;" class="detail-button">Beratung vereinbaren</a>
+                    </div>
+                </div>
+
+                <div id="ferien" class="kurs-detail">
+                    <h2>Ferienkurse</h2>
+                    <div class="kurs-info">
+                        <div class="info-box">
+                            <h3>Kurzübersicht:</h3>
+                            <ul>
+                                <li>Mach in 7 Tagen deinen Theorieunterricht in den Ferien</li>
+                                <li>14 Pflichtthemen</li>
+                                <li>Ideal für Schüler und Studenten</li>
+                            </ul>
+                        </div>
+                        <a href="#" onclick="openBeratung(); return false;" class="detail-button">Beratung vereinbaren</a>
+                    </div>
+                </div>
+
+                <div id="abend" class="kurs-detail">
+                    <h2>Abendkurse</h2>
+                    <div class="kurs-info">
+                        <div class="info-box">
+                            <h3>Auf einen Blick:</h3>
+                            <ul>
+                                <li>3x wöchentlich Theorieunterricht</li>
+                                <li>Entspannt neben deinem Job oder Ausbildung</li>
+                                <li>Flexibel über die Zeit verteilt</li>
+                            </ul>
+                        </div>
+                        <a href="#" onclick="openBeratung(); return false;" class="detail-button">Beratung vereinbaren</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fuehrerschein-optionen">
+                <h2>Deine Führerschein-Optionen</h2>
+                <div class="optionen-grid">
+                    <div class="option">
+                        <i class="fas fa-cog"></i>
+                        <p>Nur Schaltung</p>
+                    </div>
+                    <div class="option">
+                        <i class="fas fa-cogs"></i>
+                        <p>Schaltung/Automatik</p>
+                    </div>
+                    <div class="option">
+                        <i class="fas fa-car"></i>
+                        <p>Nur Automatik</p>
+                    </div>
+                    <div class="option">
+                        <i class="fas fa-trailer"></i>
+                        <p>Anhänger</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="outro-box">
+                <h2>Wir freuen uns auf DICH!</h2>
+                <p>Deine Fahrschule Best Drivers</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Best Drivers Fahrschule. Alle Rechte vorbehalten.</p>
+        <div class="footer-links">
+            <a href="impressum.html">Impressum</a> |
+            <a href="agb.html">AGB</a>
+        </div>
+    </footer>
+</body>
+</html> 
