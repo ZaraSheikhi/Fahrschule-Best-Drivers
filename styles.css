@@ -817,4 +817,39 @@ footer {
     font-family: 'Yellowtail', cursive;
     color: #00f7ff;
     text-shadow: 0 0 0px #00f7ff;
+}
+
+.preis-hinweis {
+    margin-top: 20px;
+    font-style: italic;
+    color: #00f7ff;
+}
+
+.fuehrerschein-info {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #f7ff00;
+}
+
+.fuehrerschein-info a {
+    color: #00f7ff;
+    text-decoration: underline;
+}
+
+.fuehrerschein-info a:hover {
+    color: #f7ff00;
+}
+
+.option p {
+    margin-top: 1rem;
+    color: #fff;
+}
+
+.option a {
+    color: #00f7ff;
+    text-decoration: underline;
+}
+
+.option a:hover {
+    color: #f7ff00;
 } 
