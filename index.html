@@ -209,5 +209,92 @@
     <a href="https://maps.google.com/maps?q=Waller+Heerstraße+48,+28217+Bremen" class="anfahrt-button" target="_blank">
         <i class="fas fa-map-marker-alt"></i>
     </a>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <p>Wir verwenden Cookies, um Ihnen das beste Nutzererlebnis zu bieten. Durch die weitere Nutzung der Website stimmen Sie der Verwendung von Cookies zu.</p>
+            <div class="cookie-buttons">
+                <button onclick="acceptCookies()" class="cookie-accept">Akzeptieren</button>
+                <button onclick="showCookieSettings()" class="cookie-settings">Einstellungen</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Einstellungen Modal -->
+    <div id="cookie-settings-modal" class="cookie-modal">
+        <div class="cookie-modal-content">
+            <h3>Cookie-Einstellungen</h3>
+            <div class="cookie-options">
+                <div class="cookie-option">
+                    <input type="checkbox" id="necessary-cookies" checked disabled>
+                    <label for="necessary-cookies">Notwendige Cookies (immer aktiv)</label>
+                    <p class="cookie-description">Diese Cookies sind für die Grundfunktionen der Website erforderlich.</p>
+                </div>
+                <div class="cookie-option">
+                    <input type="checkbox" id="analytics-cookies">
+                    <label for="analytics-cookies">Analytics Cookies</label>
+                    <p class="cookie-description">Diese Cookies helfen uns, die Website zu verbessern.</p>
+                </div>
+            </div>
+            <div class="cookie-modal-buttons">
+                <button onclick="saveCookieSettings()" class="cookie-save">Einstellungen speichern</button>
+                <button onclick="closeCookieSettings()" class="cookie-cancel">Abbrechen</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Cookie Funktionen
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        function acceptCookies() {
+            setCookie('cookiesAccepted', 'true', 365);
+            setCookie('analyticsCookies', 'true', 365);
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+
+        function showCookieSettings() {
+            document.getElementById('cookie-settings-modal').style.display = 'flex';
+        }
+
+        function closeCookieSettings() {
+            document.getElementById('cookie-settings-modal').style.display = 'none';
+        }
+
+        function saveCookieSettings() {
+            const analyticsCookies = document.getElementById('analytics-cookies').checked;
+            setCookie('cookiesAccepted', 'true', 365);
+            setCookie('analyticsCookies', analyticsCookies.toString(), 365);
+            document.getElementById('cookie-settings-modal').style.display = 'none';
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+
+        // Cookie Banner beim Laden prüfen
+        window.onload = function() {
+            if (!getCookie('cookiesAccepted')) {
+                document.getElementById('cookie-banner').style.display = 'flex';
+            }
+        }
+    </script>
 </body>
 </html> 
