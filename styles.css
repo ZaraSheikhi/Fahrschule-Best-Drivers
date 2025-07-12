@@ -138,6 +138,7 @@ section {
     border: 1px solid #00f7ff;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 247, 255, 0.3);
+    margin: 1rem 0;
 }
 
 .zeit-item {
@@ -181,6 +182,46 @@ section {
 
     .info-grid {
         grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        display: none;
+    }
+    
+    .hero {
+        padding: 4rem 1rem;
+    }
+    
+    section {
+        padding: 2rem 1rem;
+    }
+    
+    .kurs-ubersicht, .preis-ubersicht {
+        grid-template-columns: 1fr;
+    }
+    
+    .zeit-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .zeit-box {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .oeffnungszeiten-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Stack fixed buttons vertically for mobile */
+    .whatsapp-button {
+        right: 30px;
+        bottom: 100px;
+    }
+    .anfahrt-button {
+        right: 30px;
+        bottom: 30px;
     }
 }
 
@@ -301,20 +342,6 @@ footer {
     bottom: 0;
     width: 100%;
     text-shadow: 0 0 8px #00f7ff; /* Neon Gloweffekt */
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .hero {
-        padding: 4rem 1rem;
-    }
-    
-    section {
-        padding: 2rem 1rem;
-    }
 }
 
 .legal-content {
@@ -467,9 +494,11 @@ footer {
 }
 
 .info-box {
-    background: rgba(0, 0, 0, 0.2);
-    padding: 1.5rem;
-    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    border: 1px solid #00f7ff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 247, 255, 0.3);
     margin: 1rem 0;
 }
 
@@ -531,12 +560,6 @@ footer {
 .preis-details li {
     margin: 0.5rem 0;
     color: #fff;
-}
-
-@media (max-width: 768px) {
-    .kurs-ubersicht, .preis-ubersicht {
-        grid-template-columns: 1fr;
-    }
 }
 
 .kontakt-grid {
@@ -666,12 +689,6 @@ footer {
     margin-top: 0.3rem;
 }
 
-@media (max-width: 768px) {
-    .oeffnungszeiten-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 .wichtige-info-box {
     background: rgba(0, 0, 0, 0.3);
     padding: 2rem;
@@ -757,7 +774,9 @@ footer {
     cursor: pointer;
 }
 
-.burger div {
+.burger .line1,
+.burger .line2,
+.burger .line3 {
     width: 25px;
     height: 3px;
     background-color: #f7ff00;
@@ -960,18 +979,6 @@ footer {
     animation: pulse 2s infinite;
 }
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
 /* Anfahrt Button */
 .anfahrt-button {
     position: fixed;
@@ -1000,18 +1007,6 @@ footer {
 
 .anfahrt-button i {
     animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
 }
 
 /* Cookie Banner Styles */
@@ -1164,4 +1159,16 @@ footer {
 .cookie-cancel:hover {
     background: rgba(0, 247, 255, 0.1);
     box-shadow: 0 0 10px rgba(0, 247, 255, 0.3);
-} 
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
