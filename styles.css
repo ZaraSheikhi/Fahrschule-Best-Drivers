@@ -195,6 +195,30 @@ section {
     background: rgba(0, 0, 0, 0.3);
 }
 
+.local-seo {
+    padding: 3rem 2rem;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.local-seo-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #00f7ff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 247, 255, 0.3);
+    padding: 2rem;
+}
+
+.local-seo-content h2 {
+    margin-bottom: 1rem;
+}
+
+.local-seo-content p {
+    margin: 0.75rem 0;
+}
+
 .kontakt-preview-container {
     max-width: 600px;
     margin: 0 auto;
@@ -280,6 +304,18 @@ h2 {
 
 p {
     color: #fff; /* Weiß für bessere Lesbarkeit */
+}
+
+.contact-link {
+    color: #00f7ff;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 247, 255, 0.7);
+    text-underline-offset: 2px;
+}
+
+.contact-link:hover {
+    color: #f7ff00;
+    text-decoration-color: #f7ff00;
 }
 
 .cta-button {
