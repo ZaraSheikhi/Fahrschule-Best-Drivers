@@ -467,6 +467,14 @@ footer {
     text-shadow: 0 0 8px #f7ff00;
 }
 
+.watermark-credit {
+    margin-top: 0.85rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.45);
+    text-transform: uppercase;
+}
+
 .social-links {
     display: flex;
     align-items: center;
